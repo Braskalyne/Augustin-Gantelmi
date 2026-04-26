@@ -27,6 +27,14 @@ body {
     color: var(--light);
     background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
     background-attachment: fixed;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* Navigation */
@@ -53,6 +61,7 @@ nav.scrolled {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -102,12 +111,16 @@ nav.scrolled {
 main {
     margin-top: 80px;
     min-height: calc(100vh - 80px - 200px);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Hero Section */
@@ -387,6 +400,8 @@ footer {
 
     .nav-container {
         position: relative;
+        padding: 1rem;
+        width: 100%;
     }
 
     .nav-links {
@@ -426,7 +441,11 @@ footer {
     }
 
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    .hero {
+        padding: 4rem 1rem;
     }
 
     .hero h1 {
@@ -439,6 +458,8 @@ footer {
 
     .container {
         padding: 1rem;
+        width: 100%;
+        max-width: 100%;
     }
 
     .btn {
