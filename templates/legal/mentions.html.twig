@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions Légales - Augustin Gantelmi{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/legal.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="hero hero-legal">
+    <h1>📋 Mentions Légales</h1>
+</div>
+
+<div class="container">
+    <div class="card legal-content">
+        <h2 class="legal-section-title">Éditeur du site</h2>
+        <p class="legal-text">
+            <strong>Nom :</strong> Augustin Gantelmi<br>
+            <strong>Statut :</strong> Particulier<br>
+            <strong>Email :</strong> <a href="mailto:augustin.dille@yahoo.fr" style="color: var(--primary);">augustin.dille@yahoo.fr</a><br>
+            <strong>Téléphone :</strong> <a href="tel:+33635379468" style="color: var(--primary);">06.35.37.94.68</a><br>
+            <strong>Adresse :</strong> 558 Chemin de Wette Fays, 69300 Caluire et Cuire, France
+        </p>
+        <p class="legal-text" style="font-style: italic; margin-top: 1rem;">
+            Ce site est un portfolio personnel présentant mes compétences et réalisations en développement web.
+        </p>
+
+        <h2 class="legal-section-title-spaced">Hébergement</h2>
+        <p class="legal-text">
+            Ce site est hébergé par :<br>
+            <strong>Contabo GmbH</strong><br>
+            Aschauer Straße 32a<br>
+            81549 München, Allemagne<br>
+            Téléphone : +49 89 3564717 70<br>
+            Site web : <a href="https://contabo.com" target="_blank" style="color: var(--primary);">contabo.com</a>
+        </p>
+
+        <h2 class="legal-section-title-spaced">Propriété intellectuelle</h2>
+        <p class="legal-text">
+            L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. 
+            Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.
+        </p>
+
+        <h2 class="legal-section-title-spaced">Protection des données personnelles</h2>
+        <p class="legal-text">
+            Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant.
+            Pour exercer ces droits, contactez-nous à : <a href="mailto:augustin.dille@yahoo.fr" style="color: var(--primary);">augustin.dille@yahoo.fr</a>
+        </p>
+
+        <h2 class="legal-section-title-spaced">Cookies</h2>
+        <p class="legal-text">
+            Ce site n'utilise pas de cookies de tracking ou de publicité. Seuls des cookies techniques essentiels au fonctionnement du site peuvent être utilisés.
+        </p>
+
+        <h2 class="legal-section-title-spaced">Responsabilité</h2>
+        <p class="legal-text">
+            Les informations contenues sur ce site sont aussi précises que possible. Toutefois, Augustin Gantelmi ne pourra être tenu responsable des omissions, 
+            des inexactitudes et des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.
+        </p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact - Augustin Gantelmi{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="hero hero-contact">
+    <h1>📬 Contactez-moi</h1>
+    <p>Discutons de votre projet ensemble</p>
+</div>
+
+<div class="container">
+    <div class="contact-layout">
+        <div>
+            <div class="card">
+                <h2 class="contact-info-title">
+                    Envoyez-moi un message
+                </h2>
+                
+                {{ form_start(form) }}
+                
+                <div class="form-group">
+                    {{ form_label(form.name) }}
+                    {{ form_widget(form.name) }}
+                    {{ form_errors(form.name) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.email) }}
+                    {{ form_widget(form.email) }}
+                    {{ form_errors(form.email) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.subject) }}
+                    {{ form_widget(form.subject) }}
+                    {{ form_errors(form.subject) }}
+                </div>
+
+                <div class="form-group">
+                    {{ form_label(form.message) }}
+                    {{ form_widget(form.message) }}
+                    {{ form_errors(form.message) }}
+                </div>
+
+                <div class="form-group form-group-checkbox">
+                    {{ form_widget(form.consent) }}
+                    <label for="{{ form.consent.vars.id }}">
+                        J'accepte que mes données soient collectées et traitées conformément à la 
+                        <a href="{{ path('app_legal_privacy') }}" target="_blank" style="color: var(--primary); text-decoration: underline;">politique de confidentialité</a>.
+                    </label>
+                    {{ form_errors(form.consent) }}
+                </div>
+
+                <button type="submit" class="btn form-submit">
+                    Envoyer le message 📤
+                </button>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+
+        <div>
+            <h2 class="contact-info-title">
+                Informations de contact
+            </h2>
+
+            <div class="contact-info-cards">
+                <div class="contact-info-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:augustin.dille@yahoo.fr">
+                        augustin.dille@yahoo.fr
+                    </a>
+                </div>
+
+                <div class="contact-info-card" style="animation-delay: 0.1s;">
+                    <div class="contact-icon">📱</div>
+                    <h3>Téléphone</h3>
+                    <a href="tel:+33635379468">
+                        06.35.37.94.68
+                    </a>
+                </div>
+
+                <div class="contact-info-card" style="animation-delay: 0.2s;">
+                    <div class="contact-icon">📍</div>
+                    <h3>Localisation</h3>
+                    <p class="contact-location">Caluire et Cuire, Lyon</p>
+                    <p class="contact-location-sub">
+                        Région Lyonnaise
+                    </p>
+                </div>
+
+                <div class="contact-info-card" style="animation-delay: 0.3s;">
+                    <div class="contact-icon">💼</div>
+                    <h3>Réseaux sociaux</h3>
+                    <div class="social-buttons">
+                        <a href="https://github.com/braskalyne" target="_blank" class="btn">
+                            GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/augustin-gantelmi" target="_blank" class="btn btn-secondary">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="availability-section">
+        <h2 class="availability-title">
+            ⏰ Disponibilité
+        </h2>
+        <div class="availability-grid">
+            <div class="availability-item">
+                <div class="availability-item-icon">⚡</div>
+                <h4>Réponse rapide</h4>
+                <p>Sous 24h en moyenne</p>
+            </div>
+            <div class="availability-item">
+                <div class="availability-item-icon">🌍</div>
+                <h4>Remote friendly</h4>
+                <p>Collaboration à distance</p>
+            </div>
+            <div class="availability-item">
+                <div class="availability-item-icon">🤝</div>
+                <h4>À l'écoute</h4>
+                <p>Ouvert aux opportunités</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
+
+    ul.form-error {
+        list-style: none;
+        padding: 0;
+    }
+</style>
+{% endblock %}

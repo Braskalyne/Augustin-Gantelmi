@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Politique de Confidentialité - Augustin Gantelmi{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/legal.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="hero hero-legal">
+    <h1>🔒 Politique de Confidentialité</h1>
+</div>
+
+<div class="container">
+    <div class="card legal-content">
+        <p class="legal-date">
+            Dernière mise à jour : {{ 'now'|date('d/m/Y') }}
+        </p>
+
+        <h2 class="legal-section-title">1. Collecte des données</h2>
+        <p class="legal-text">
+            Dans le cadre de l'utilisation du formulaire de contact, nous collectons les données suivantes :
+        </p>
+        <ul class="legal-list">
+            <li>Nom et prénom</li>
+            <li>Adresse email</li>
+            <li>Sujet et contenu du message</li>
+        </ul>
+
+        <h2 class="legal-section-title-spaced">2. Finalité du traitement</h2>
+        <p class="legal-text">
+            Les données collectées sont utilisées exclusivement pour :
+        </p>
+        <ul class="legal-list">
+            <li>Répondre à vos demandes de contact</li>
+            <li>Échanger sur d'éventuelles collaborations professionnelles</li>
+        </ul>
+
+        <h2 class="legal-section-title-spaced">3. Durée de conservation</h2>
+        <p class="legal-text">
+            Vos données sont conservées pendant une durée maximale de 3 ans à compter de notre dernier échange.
+        </p>
+
+        <h2 class="legal-section-title-spaced">4. Vos droits</h2>
+        <p class="legal-text">
+            Conformément au RGPD, vous disposez des droits suivants :
+        </p>
+        <ul class="legal-list">
+            <li><strong>Droit d'accès :</strong> obtenir une copie de vos données</li>
+            <li><strong>Droit de rectification :</strong> corriger vos données inexactes</li>
+            <li><strong>Droit à l'effacement :</strong> supprimer vos données</li>
+            <li><strong>Droit d'opposition :</strong> vous opposer au traitement de vos données</li>
+            <li><strong>Droit à la portabilité :</strong> récupérer vos données dans un format structuré</li>
+        </ul>
+
+        <h2 class="legal-section-title-spaced">5. Exercice des droits</h2>
+        <p class="legal-text">
+            Pour exercer vos droits, vous pouvez nous contacter à l'adresse : 
+            <a href="mailto:augustin.dille@yahoo.fr" style="color: var(--primary);">augustin.dille@yahoo.fr</a>
+        </p>
+
+        <h2 class="legal-section-title-spaced">6. Sécurité</h2>
+        <p class="legal-text">
+            Nous mettons en œuvre toutes les mesures techniques et organisationnelles appropriées pour protéger vos données contre 
+            la destruction, la perte, l'altération, la divulgation ou l'accès non autorisé.
+        </p>
+
+        <h2 class="legal-section-title-spaced">7. Cookies</h2>
+        <p class="legal-text">
+            Ce site n'utilise pas de cookies de tracking, de publicité ou d'analyse. Aucune donnée n'est transmise à des tiers.
+        </p>
+    </div>
+</div>
+{% endblock %}

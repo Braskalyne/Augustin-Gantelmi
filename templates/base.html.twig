@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Augustin - Développeur Freelance{% endblock %}</title>
+    <meta name="description" content="Développeur Full-Stack Freelance spécialisé en Symfony, React et DevOps. Création d'applications web modernes et performantes.">
+    
+    <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="{{ path('app_home') }}" class="logo">Augustin Gantelmi</a>
+            <ul class="nav-links">
+                <li><a href="{{ path('app_home') }}">Accueil</a></li>
+                <li><a href="{{ path('app_about') }}">À propos</a></li>
+                <li><a href="{{ path('app_projects') }}">Projets</a></li>
+                <li><a href="{{ path('app_contact') }}">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% for label, messages in app.flashes %}
+        <div class="flash-messages">
+            {% for message in messages %}
+                <div class="flash {{ label }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+
+    <main>
+        {% block body %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Augustin Gantelmi</h3>
+                <p>Développeur Back-End spécialisé en PHP/Symfony, passionné par la création d'applications web modernes et performantes.</p>
+                <div class="social-links">
+                    <a href="https://github.com/braskalyne" target="_blank" title="GitHub">🔗</a>
+                    <a href="https://linkedin.com/in/augustin-gantelmi" target="_blank" title="LinkedIn">💼</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <a href="{{ path('app_home') }}">Accueil</a>
+                <a href="{{ path('app_about') }}">À propos</a>
+                <a href="{{ path('app_projects') }}">Projets</a>
+                <a href="{{ path('app_contact') }}">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Légal</h3>
+                <a href="{{ path('app_legal_mentions') }}">Mentions légales</a>
+                <a href="{{ path('app_legal_privacy') }}">Politique de confidentialité</a>
+                <a href="{{ path('app_legal_cgu') }}">CGU</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <a href="mailto:augustin.dille@yahoo.fr">augustin.dille@yahoo.fr</a>
+                <a href="tel:+33635379468">06.35.37.94.68</a>
+                <a href="#">Lyon, France</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; {{ 'now'|date('Y') }} Augustin Gantelmi - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="{{ asset('js/base.js') }}"></script>
+    {% block javascripts %}{% endblock %}
+</body>
+</html>

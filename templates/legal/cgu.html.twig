@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Conditions Générales d'Utilisation - Augustin Gantelmi{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/legal.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="hero hero-legal">
+    <h1>📜 Conditions Générales d'Utilisation</h1>
+</div>
+
+<div class="container">
+    <div class="card legal-content">
+        <p class="legal-date">
+            Dernière mise à jour : {{ 'now'|date('d/m/Y') }}
+        </p>
+
+        <h2 class="legal-section-title">1. Objet</h2>
+        <p class="legal-text">
+            Les présentes Conditions Générales d'Utilisation (CGU) régissent l'accès et l'utilisation du site web d'Augustin Gantelmi, 
+            développeur indépendant spécialisé en développement back-end PHP/Symfony.
+        </p>
+
+        <h2 class="legal-section-title-spaced">2. Acceptation des CGU</h2>
+        <p class="legal-text">
+            L'accès et l'utilisation du site impliquent l'acceptation pleine et entière des présentes CGU. 
+            Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser ce site.
+        </p>
+
+        <h2 class="legal-section-title-spaced">3. Services proposés</h2>
+        <p class="legal-text">
+            Ce site présente les services de développement web proposés par Augustin Gantelmi :
+        </p>
+        <ul class="legal-list">
+            <li>Développement d'applications web en PHP/Symfony</li>
+            <li>Développement d'API backend</li>
+            <li>Intégration et personnalisation de CMS (Sulu, WordPress)</li>
+            <li>Maintenance et évolution d'applications existantes</li>
+        </ul>
+
+        <h2 class="legal-section-title-spaced">4. Propriété intellectuelle</h2>
+        <p class="legal-text">
+            Tous les éléments du site (textes, images, graphismes, logo, icônes, etc.) sont la propriété exclusive d'Augustin Gantelmi, 
+            sauf mention contraire. Toute reproduction, distribution, modification ou utilisation à des fins commerciales est strictement interdite 
+            sans autorisation préalable écrite.
+        </p>
+
+        <h2 class="legal-section-title-spaced">5. Limitation de responsabilité</h2>
+        <p class="legal-text">
+            Augustin Gantelmi s'efforce d'assurer l'exactitude et la mise à jour des informations diffusées sur ce site. 
+            Toutefois, il ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations mises à disposition.
+        </p>
+        <p class="legal-text">
+            Le site peut être temporairement indisponible en raison de maintenance ou de problèmes techniques. 
+            Augustin Gantelmi ne saurait être tenu responsable des dommages résultant de l'indisponibilité du site.
+        </p>
+
+        <h2 class="legal-section-title-spaced">6. Contact</h2>
+        <p class="legal-text">
+            Pour toute demande de prestation, tout devis ou toute question concernant les services proposés, 
+            vous pouvez nous contacter via :
+        </p>
+        <ul class="legal-list">
+            <li>Email : <a href="mailto:augustin.dille@yahoo.fr" style="color: var(--primary);">augustin.dille@yahoo.fr</a></li>
+            <li>Téléphone : <a href="tel:+33635379468" style="color: var(--primary);">06.35.37.94.68</a></li>
+            <li>Formulaire de contact disponible sur le site</li>
+        </ul>
+
+        <h2 class="legal-section-title-spaced">7. Droit applicable</h2>
+        <p class="legal-text">
+            Les présentes CGU sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents.
+        </p>
+    </div>
+</div>
+{% endblock %}

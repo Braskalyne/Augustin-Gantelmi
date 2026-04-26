@@ -1,0 +1,156 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}À propos - Augustin Gantelmi{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/about.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="hero hero-about">
+    <h1>✨ À propos de moi</h1>
+    <p>Développeur Back-End passionné</p>
+</div>
+
+<div class="container">
+    <div class="about-intro">
+        <div class="card">
+            <div class="about-avatar-card">
+                👨‍💻
+            </div>
+        </div>
+        <div>
+            <h2 class="about-title">
+                Développeur Back-End PHP/Symfony
+            </h2>
+            <p class="about-text">
+                Passionné par le développement web, je cherche à rejoindre une entreprise de la région lyonnaise où je pourrai apporter mes compétences en développement back-end, notamment en PHP/Symfony, tout en restant ouvert à d'autres technologies.
+            </p>
+            <p class="about-text">
+                Fort de <strong>3 années d'études</strong> à EPITECH Lyon (Cursus Ingénieur Informatique) et de <strong>3 ans d'expérience professionnelle</strong> chez Canari Studio en tant que développeur back-end, j'ai acquis une solide expertise technique.
+            </p>
+            <p class="about-text">
+                Je travaille principalement avec <strong>PHP/Symfony</strong>, les <strong>CMS Sulu et WordPress</strong>, et je maîtrise également <strong>JavaScript/jQuery</strong>, <strong>Java</strong> et <strong>C/C++</strong>.
+            </p>
+        </div>
+    </div>
+
+    <section class="formation-section">
+        <h2 class="section-title">
+            🎓 Formation & Expériences
+        </h2>
+        <div class="formation-grid">
+            <div class="card">
+                <div class="formation-icon">🎓</div>
+                <h3 class="formation-title">EPITECH Lyon</h3>
+                <p class="formation-description">Cursus Ingénieur Informatique</p>
+                <p class="formation-period">2018 - 2021</p>
+            </div>
+            <div class="card" style="animation-delay: 0.1s;">
+                <div class="formation-icon">💼</div>
+                <h3 class="formation-title">Canari Studio</h3>
+                <p class="formation-description">CDI - Développeur Back-End</p>
+                <p class="formation-period">Août 2022 - Août 2025</p>
+            </div>
+            <div class="card" style="animation-delay: 0.2s;">
+                <div class="formation-icon">🏢</div>
+                <h3 class="formation-title">Keyrus</h3>
+                <p class="formation-description">Stage - Développeur</p>
+                <p class="formation-period">Avril - Sept. 2021</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements-section">
+        <h2 class="section-title">
+            💡 Réalisations chez Canari Studio
+        </h2>
+        <div class="achievements-container">
+            <ul class="achievements-list">
+                <li class="achievement-item">
+                    <span class="achievement-checkmark">✓</span>
+                    <p class="achievement-text">
+                        Développement de sites web pour divers clients (Habilis, Immpulsion, Cabaret Aléatoire, Altexence) en utilisant <strong>PHP/Symfony</strong> ou le CMS <strong>Sulu</strong>
+                    </p>
+                </li>
+                <li class="achievement-item">
+                    <span class="achievement-checkmark">✓</span>
+                    <p class="achievement-text">
+                        Refonte complète du site <strong>data.ai</strong> en Sulu avec réunions hebdomadaires avec des clients américains
+                    </p>
+                </li>
+                <li class="achievement-item">
+                    <span class="achievement-checkmark">✓</span>
+                    <p class="achievement-text">
+                        Maintenance du site data.ai sous <strong>WordPress</strong> pendant 2 ans, gestion de tickets avec <strong>Node.js/Laravel</strong>
+                    </p>
+                </li>
+                <li class="achievement-item">
+                    <span class="achievement-checkmark">✓</span>
+                    <p class="achievement-text">
+                        Conception d'<strong>API sur mesure</strong> en respectant les exigences techniques et administratives des clients
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="atouts-section">
+        <h2 class="section-title">
+            🎯 Mes Atouts
+        </h2>
+        <div class="atouts-grid">
+            <div class="card atout-card">
+                <div class="atout-icon">🎯</div>
+                <h3 class="atout-title">Autonome</h3>
+                <p class="atout-description">Capable de gérer mes projets de A à Z</p>
+            </div>
+            <div class="card atout-card" style="animation-delay: 0.1s;">
+                <div class="atout-icon">🤝</div>
+                <h3 class="atout-title">Sociable</h3>
+                <p class="atout-description">Esprit d'équipe et communication</p>
+            </div>
+            <div class="card atout-card" style="animation-delay: 0.2s;">
+                <div class="atout-icon">🔍</div>
+                <h3 class="atout-title">Curieux</h3>
+                <p class="atout-description">Toujours à l'affût des nouvelles technologies</p>
+            </div>
+            <div class="card atout-card" style="animation-delay: 0.3s;">
+                <div class="atout-icon">📐</div>
+                <h3 class="atout-title">Rigoureux</h3>
+                <p class="atout-description">Code propre et maintenable</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="interests-section">
+        <h2 class="section-title">
+            🎮 Centres d'intérêts
+        </h2>
+        <div class="interests-container">
+            <div>
+                <div class="interest-icon">🎵</div>
+                <p class="interest-name">Musique</p>
+            </div>
+            <div>
+                <div class="interest-icon">🎮</div>
+                <p class="interest-name">Jeux-vidéos</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="cta-title">
+            🤝 Travaillons ensemble !
+        </h2>
+        <p class="cta-description">
+            Un projet en tête ? N'hésitez pas à me contacter
+        </p>
+        <div class="cta-buttons">
+            <a href="{{ path('app_projects') }}" class="btn btn-secondary">Voir mes projets</a>
+            <a href="{{ path('app_contact') }}" class="btn">Me contacter</a>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

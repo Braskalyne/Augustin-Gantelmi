@@ -1,0 +1,58 @@
+/* Legal pages specific styles */
+
+.hero-legal {
+    padding: 4rem 2rem;
+}
+
+.legal-content {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 3rem;
+}
+
+.legal-section-title {
+    color: var(--primary);
+    margin-bottom: 2rem;
+}
+
+.legal-section-title-spaced {
+    color: var(--primary);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.legal-text {
+    color: var(--light);
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.legal-text strong {
+    font-weight: 600;
+}
+
+.legal-text a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.legal-text a:hover {
+    text-decoration: underline;
+}
+
+.legal-list {
+    color: var(--light);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.legal-list li {
+    margin-bottom: 0.5rem;
+}
+
+.legal-date {
+    color: var(--light);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}

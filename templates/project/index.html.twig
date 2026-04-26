@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes Projets - Augustin Gantelmi{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/projects.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="hero hero-projects">
+    <h1>🚀 Mes Projets</h1>
+    <p>Découvrez mes réalisations récentes</p>
+</div>
+
+<div class="container">
+    <section class="projects-section">
+        {% set featuredProjects = projects|filter(p => p.featured) %}
+        {% if featuredProjects|length > 0 %}
+        <h2 class="section-title">
+            ⭐ Projets Phares
+        </h2>
+        <div class="featured-projects-grid">
+            {% for project in featuredProjects %}
+            <div class="card project-card" style="animation-delay: {{ loop.index * 0.1 }}s;">
+                <img src="{{ project.image }}" alt="{{ project.title }}" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-description">{{ project.description }}</p>
+                    <div class="project-technologies">
+                        {% for tech in project.technologies %}
+                        <span class="tech-tag">
+                            {{ tech }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                    <div class="project-links">
+                        {% if project.github %}
+                        <a href="{{ project.github }}" target="_blank" class="btn btn-secondary project-link">
+                            GitHub
+                        </a>
+                        {% endif %}
+                        {% if project.demo %}
+                        <a href="{{ project.demo }}" target="_blank" class="btn project-link">
+                            Démo Live
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <h2 class="section-title">
+            📂 Tous les projets
+        </h2>
+        <div class="projects-grid">
+            {% for project in projects %}
+            <div class="card project-card" style="animation-delay: {{ loop.index * 0.1 }}s;">
+                <img src="{{ project.image }}" alt="{{ project.title }}" class="project-image-small">
+                <div class="project-content-small">
+                    <h3 class="project-title-small">{{ project.title }}</h3>
+                    <p class="project-description-small">
+                        {{ project.description|length > 120 ? project.description|slice(0, 120) ~ '...' : project.description }}
+                    </p>
+                    <div class="project-technologies-small">
+                        {% for tech in project.technologies %}
+                        <span class="tech-tag-small">
+                            {{ tech }}
+                        </span>
+                        {% endfor %}
+                    </div>
+                    <div class="project-links-small">
+                        {% if project.github %}
+                        <a href="{{ project.github }}" target="_blank" class="btn btn-secondary project-link">
+                            GitHub
+                        </a>
+                        {% endif %}
+                        {% if project.demo %}
+                        <a href="{{ project.demo }}" target="_blank" class="btn project-link">
+                            Voir
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="cta-title">
+            💼 Vous avez un projet ?
+        </h2>
+        <p class="cta-description">
+            Je suis toujours intéressé par de nouveaux défis et collaborations. Parlons de votre projet !
+        </p>
+        <a href="{{ path('app_contact') }}" class="btn cta-button">
+            Démarrer un projet →
+        </a>
+    </section>
+</div>
+
+{% endblock %}

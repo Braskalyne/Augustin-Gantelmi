@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil - Augustin Gantelmi{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="hero">
+    <h1>👋 Bonjour, je suis Augustin Gantelmi</h1>
+    <p>Développeur Back-End PHP/Symfony</p>
+    <p class="hero-subtitle">
+        Passionné par le développement web
+    </p>
+    <p class="hero-actions">
+        <a href="{{ path('app_projects') }}" class="btn">Découvrir mes projets</a>
+        <a href="{{ path('app_contact') }}" class="btn btn-secondary">Me contacter</a>
+    </p>
+</div>
+
+<div class="container">
+    <section class="skills-section">
+        <h2 class="section-title">
+            🚀 Mes Compétences
+        </h2>
+        <div class="skills-grid">
+            {% for skill in skills %}
+            <div class="card skill-card" style="animation-delay: {{ loop.index * 0.1 }}s;">
+                <div class="skill-icon">{{ skill.icon }}</div>
+                <h3 class="skill-name">{{ skill.name }}</h3>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="experience-section">
+        <h2 class="section-title">
+            💼 Expériences
+        </h2>
+        <div class="experience-container">
+            {% for exp in experiences %}
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="experience-title">{{ exp.title }}</h3>
+                    <span class="experience-badge">{{ exp.type }}</span>
+                </div>
+                <p class="experience-company">{{ exp.company }}</p>
+                <p class="experience-period">{{ exp.period }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="services-section">
+        <h2 class="section-title">
+            💡 Services
+        </h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-icon">🌐</div>
+                <h3 class="service-title">Développement Web</h3>
+                <p class="service-description">Sites web et applications sur-mesure avec PHP/Symfony et CMS Sulu.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">🔧</div>
+                <h3 class="service-title">API Backend</h3>
+                <p class="service-description">Développement d'API robustes et sécurisées pour vos applications.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">📝</div>
+                <h3 class="service-title">CMS & Administration</h3>
+                <p class="service-description">Sites administrables avec Sulu CMS ou WordPress selon vos besoins.</p>
+            </div>
+            <div class="service-item">
+                <div class="service-icon">⚙️</div>
+                <h3 class="service-title">Maintenance</h3>
+                <p class="service-description">Support technique et évolution de vos applications existantes.</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
