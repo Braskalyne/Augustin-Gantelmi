@@ -2,7 +2,7 @@
 
 Portfolio personnel présentant mes compétences et réalisations en développement web back-end.
 
-🌐 **Site en ligne :** [À venir]
+🌐 **Site en ligne :** [https://augustin-gantelmi.fr](https://augustin-gantelmi.fr)
 
 ## 📋 Description
 
@@ -10,11 +10,12 @@ Site portfolio professionnel développé avec Symfony 7, présentant mes service
 
 ## 🛠️ Stack Technique
 
-- **Backend:** PHP 8.2, Symfony 7
+- **Backend:** PHP 8.4, Symfony 7
 - **Frontend:** HTML5, CSS3, JavaScript Vanilla
-- **Base de données:** Doctrine ORM, MySQL
+- **Base de données:** Doctrine ORM, PostgreSQL
 - **Templating:** Twig
 - **Sécurité:** CSRF Protection, RGPD compliant
+- **Hébergement:** Contabo VPS, Nginx, HTTPS (Let's Encrypt)
 
 ## ✨ Fonctionnalités
 
