@@ -48,6 +48,12 @@ nav {
     z-index: 1000;
     transition: all 0.3s ease;
     border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+    /* Fix pour le scintillement sur Firefox */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 nav.scrolled {
