@@ -1,12 +1,27 @@
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
+// Navbar scroll effect avec throttle pour Firefox
+let ticking = false;
+let lastScrollY = 0;
+
+function updateNavbar() {
     const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
+    const scrollY = window.scrollY;
+    
+    if (scrollY > 50 && !navbar.classList.contains('scrolled')) {
         navbar.classList.add('scrolled');
-    } else {
+    } else if (scrollY <= 50 && navbar.classList.contains('scrolled')) {
         navbar.classList.remove('scrolled');
     }
-});
+    
+    ticking = false;
+    lastScrollY = scrollY;
+}
+
+window.addEventListener('scroll', function() {
+    if (!ticking) {
+        window.requestAnimationFrame(updateNavbar);
+        ticking = true;
+    }
+}, { passive: true });
 
 // Mobile menu toggle
 const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
