@@ -25,12 +25,12 @@ class ProjectController extends AbstractController
             ],
             [
                 'id' => 2,
-                'title' => 'maud-royole.fr',
+                'title' => '4fam',
                 'description' => 'Site vitrine pour artiste muraliste exposant ses fresques et réalisations. Back-office complet permettant à la cliente de gérer ses galeries, ajouter ses œuvres et modifier le contenu sans intervention technique.',
                 'technologies' => ['PHP', 'Symfony', 'HTML', 'CSS', 'JavaScript'],
-                'image' => 'https://placehold.co/600x400/764ba2/ffffff?text=Maud+Royole',
+                'image' => 'https://placehold.co/600x400/764ba2/ffffff?text=4fam',
                 'github' => null,
-                'demo' => 'https://maud-royole.fr',
+                'demo' => 'https://www.4fam.fr',
                 'featured' => true,
             ],
         ];
